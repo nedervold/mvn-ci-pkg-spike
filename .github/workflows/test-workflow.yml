@@ -16,3 +16,11 @@ jobs:
         run: mvn -B package --file pom.xml
       - name: Run with Maven
         run: mvn -B exec:java --file pom.xml
+      - name: Staging
+        run: mkdir staging &&  cp target/*.jar staging
+      - name: Packaging
+        uses: actions/upload-artifact@v1
+        with:
+	    name: Package
+	    path: staging
+
