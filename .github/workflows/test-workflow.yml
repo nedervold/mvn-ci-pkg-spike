@@ -21,6 +21,5 @@ jobs:
       - name: Packaging
         uses: actions/upload-artifact@v1
         with:
-	    name: Package
-	    path: staging
-
+            name: Package
+            path: staging
